@@ -1,0 +1,356 @@
+{
+  "model_type": "LightGBM Classifier",
+  "target_horizon_days": 14,
+  "classes": [
+    "DOWN",
+    "FLAT",
+    "UP"
+  ],
+  "feature_names": [
+    "ram_price_lag_1",
+    "ram_return_1d",
+    "ram_price_lag_7",
+    "ram_return_7d",
+    "ram_price_lag_14",
+    "ram_return_14d",
+    "ram_price_lag_30",
+    "ram_return_30d",
+    "ram_vol_14d",
+    "ram_vol_30d",
+    "000660_KS_close",
+    "000660_KS_close_lag_1",
+    "000660_KS_return_1d",
+    "000660_KS_close_lag_7",
+    "000660_KS_return_7d",
+    "000660_KS_close_lag_14",
+    "000660_KS_return_14d",
+    "000660_KS_close_lag_30",
+    "000660_KS_return_30d",
+    "000660_KS_vol_14d",
+    "000660_KS_vol_30d",
+    "005930_KS_close",
+    "005930_KS_close_lag_1",
+    "005930_KS_return_1d",
+    "005930_KS_close_lag_7",
+    "005930_KS_return_7d",
+    "005930_KS_close_lag_14",
+    "005930_KS_return_14d",
+    "005930_KS_close_lag_30",
+    "005930_KS_return_30d",
+    "005930_KS_vol_14d",
+    "005930_KS_vol_30d",
+    "MU_close",
+    "MU_close_lag_1",
+    "MU_return_1d",
+    "MU_close_lag_7",
+    "MU_return_7d",
+    "MU_close_lag_14",
+    "MU_return_14d",
+    "MU_close_lag_30",
+    "MU_return_30d",
+    "MU_vol_14d",
+    "MU_vol_30d",
+    "NVDA_close",
+    "NVDA_close_lag_1",
+    "NVDA_return_1d",
+    "NVDA_close_lag_7",
+    "NVDA_return_7d",
+    "NVDA_close_lag_14",
+    "NVDA_return_14d",
+    "NVDA_close_lag_30",
+    "NVDA_return_30d",
+    "NVDA_vol_14d",
+    "NVDA_vol_30d",
+    "TSM_close",
+    "TSM_close_lag_1",
+    "TSM_return_1d",
+    "TSM_close_lag_7",
+    "TSM_return_7d",
+    "TSM_close_lag_14",
+    "TSM_return_14d",
+    "TSM_close_lag_30",
+    "TSM_return_30d",
+    "TSM_vol_14d",
+    "TSM_vol_30d",
+    "news_headline_count",
+    "news_avg_sentiment",
+    "count_shortage",
+    "count_tariff",
+    "count_demand_surge",
+    "count_supply_cut",
+    "count_disaster",
+    "count_pos_sentiment",
+    "count_neg_sentiment",
+    "news_pos_ratio",
+    "news_neg_ratio",
+    "news_sentiment_roll_7d",
+    "news_sentiment_roll_14d",
+    "count_shortage_roll_7d",
+    "count_demand_surge_roll_7d",
+    "count_supply_cut_roll_7d"
+  ],
+  "n_samples": 1051,
+  "n_features": 81,
+  "walk_forward_metrics": {
+    "accuracy": 0.5372,
+    "macro_f1": 0.3885,
+    "weighted_f1": 0.5303,
+    "confusion_matrix": [
+      [
+        22,
+        59,
+        42
+      ],
+      [
+        27,
+        288,
+        81
+      ],
+      [
+        14,
+        69,
+        29
+      ]
+    ],
+    "per_class_f1": [
+      0.2366,
+      0.7094,
+      0.2197
+    ],
+    "support": [
+      123,
+      396,
+      112
+    ],
+    "n_samples": 631
+  },
+  "baseline_metrics": {
+    "flat_baseline": {
+      "accuracy": 0.6276,
+      "macro_f1": 0.2571,
+      "weighted_f1": 0.484,
+      "confusion_matrix": [
+        [
+          0,
+          123,
+          0
+        ],
+        [
+          0,
+          396,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "per_class_f1": [
+        0.0,
+        0.7712,
+        0.0
+      ],
+      "support": [
+        123,
+        396,
+        112
+      ],
+      "n_samples": 631
+    },
+    "majority_baseline": {
+      "accuracy": 0.6276,
+      "macro_f1": 0.2571,
+      "weighted_f1": 0.484,
+      "confusion_matrix": [
+        [
+          0,
+          123,
+          0
+        ],
+        [
+          0,
+          396,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "per_class_f1": [
+        0.0,
+        0.7712,
+        0.0
+      ],
+      "support": [
+        123,
+        396,
+        112
+      ],
+      "n_samples": 631,
+      "majority_class_name": "FLAT"
+    },
+    "momentum_baseline": {
+      "accuracy": 0.4374,
+      "macro_f1": 0.3038,
+      "weighted_f1": 0.4394,
+      "confusion_matrix": [
+        [
+          11,
+          80,
+          32
+        ],
+        [
+          104,
+          242,
+          50
+        ],
+        [
+          18,
+          71,
+          23
+        ]
+      ],
+      "per_class_f1": [
+        0.0859,
+        0.6134,
+        0.212
+      ],
+      "support": [
+        123,
+        396,
+        112
+      ],
+      "n_samples": 631
+    }
+  },
+  "confidence_metrics": {
+    "threshold": 0.6,
+    "n_confident": 163,
+    "n_total": 631,
+    "pct_confident": 25.8,
+    "accuracy_confident_calls": 0.2577
+  },
+  "fold_details": [
+    {
+      "fold": 1,
+      "train_samples": 420,
+      "test_samples": 126,
+      "accuracy": 0.3413,
+      "macro_f1": 0.2158,
+      "weighted_f1": 0.4345
+    },
+    {
+      "fold": 2,
+      "train_samples": 546,
+      "test_samples": 126,
+      "accuracy": 0.6111,
+      "macro_f1": 0.2606,
+      "weighted_f1": 0.5025
+    },
+    {
+      "fold": 3,
+      "train_samples": 672,
+      "test_samples": 126,
+      "accuracy": 0.6984,
+      "macro_f1": 0.2741,
+      "weighted_f1": 0.5744
+    },
+    {
+      "fold": 4,
+      "train_samples": 798,
+      "test_samples": 126,
+      "accuracy": 0.5873,
+      "macro_f1": 0.4573,
+      "weighted_f1": 0.5168
+    },
+    {
+      "fold": 5,
+      "train_samples": 924,
+      "test_samples": 127,
+      "accuracy": 0.4488,
+      "macro_f1": 0.4294,
+      "weighted_f1": 0.4497
+    }
+  ],
+  "top_features": [
+    {
+      "rank": 1,
+      "feature": "000660_KS_close",
+      "importance": 0.20169
+    },
+    {
+      "rank": 2,
+      "feature": "000660_KS_close_lag_1",
+      "importance": 0.20156
+    },
+    {
+      "rank": 3,
+      "feature": "000660_KS_close_lag_7",
+      "importance": 0.19995
+    },
+    {
+      "rank": 4,
+      "feature": "000660_KS_close_lag_14",
+      "importance": 0.19604
+    },
+    {
+      "rank": 5,
+      "feature": "000660_KS_close_lag_30",
+      "importance": 0.18499
+    },
+    {
+      "rank": 6,
+      "feature": "005930_KS_close",
+      "importance": 0.00324
+    },
+    {
+      "rank": 7,
+      "feature": "005930_KS_close_lag_1",
+      "importance": 0.00324
+    },
+    {
+      "rank": 8,
+      "feature": "005930_KS_close_lag_7",
+      "importance": 0.0032
+    },
+    {
+      "rank": 9,
+      "feature": "005930_KS_close_lag_14",
+      "importance": 0.00313
+    },
+    {
+      "rank": 10,
+      "feature": "005930_KS_close_lag_30",
+      "importance": 0.00295
+    },
+    {
+      "rank": 11,
+      "feature": "MU_close",
+      "importance": 0.0
+    },
+    {
+      "rank": 12,
+      "feature": "MU_close_lag_1",
+      "importance": 0.0
+    },
+    {
+      "rank": 13,
+      "feature": "MU_close_lag_7",
+      "importance": 0.0
+    },
+    {
+      "rank": 14,
+      "feature": "MU_close_lag_14",
+      "importance": 0.0
+    },
+    {
+      "rank": 15,
+      "feature": "MU_close_lag_30",
+      "importance": 0.0
+    }
+  ],
+  "trained_date": "2026-11-02 21:07:07"
+}

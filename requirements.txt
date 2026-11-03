@@ -1,0 +1,16 @@
+# Pinned to the versions the model was trained with, so the saved
+# models/price_model.pkl loads identically on the deployment server.
+
+# Data
+numpy==2.5.4
+pandas==3.1.0
+
+# Modelling
+scikit-learn==1.9.1
+lightgbm==4.7.0      # macOS: brew install libomp   |  Linux: libgomp1 (see packages.txt)
+shap==0.54.1
+joblib==1.6.0
+
+# App
+streamlit==1.66.1
+plotly==7.1.0

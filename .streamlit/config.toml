@@ -1,0 +1,20 @@
+# PhoneWorth theme. Light and dark variants are both defined so the app
+# follows the user's system setting (or the Settings menu in the app).
+
+[theme.light]
+primaryColor = "#4F46E5"
+backgroundColor = "#F6F7FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#111827"
+
+[theme.dark]
+primaryColor = "#7C83F5"
+backgroundColor = "#0E1015"
+secondaryBackgroundColor = "#171A21"
+textColor = "#F3F4F6"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true

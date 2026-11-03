@@ -1,0 +1,1149 @@
+{
+  "trained_at": "2026-11-03T13:03:23+00:00",
+  "n_phones": 992,
+  "n_distinct_models": 797,
+  "cv": {
+    "method": "GroupKFold",
+    "folds": 5,
+    "group_by": "base_model"
+  },
+  "metrics": {
+    "Brand median": {
+      "MAE_inr": 15144.559572165857,
+      "MAPE_pct": 48.61856225622777,
+      "R2": 0.25224663313553985,
+      "R2_log": 0.34800416386024124,
+      "within_10pct": 13.306451612903224,
+      "within_20pct": 25.705645161290324
+    },
+    "Ridge": {
+      "MAE_inr": 6704.084545812879,
+      "MAPE_pct": 19.10807292308922,
+      "R2": 0.7933380263236591,
+      "R2_log": 0.893126883945274,
+      "within_10pct": 36.391129032258064,
+      "within_20pct": 62.096774193548384
+    },
+    "LightGBM": {
+      "MAE_inr": 5235.46233850295,
+      "MAPE_pct": 15.921216652841672,
+      "R2": 0.8770078520136528,
+      "R2_log": 0.9216950454594898,
+      "within_10pct": 45.36290322580645,
+      "within_20pct": 71.7741935483871
+    }
+  },
+  "headline": {
+    "mape_pct": 15.9,
+    "mae_inr": 5235,
+    "r2": 0.877
+  },
+  "removed_rows": {
+    "raw_rows": 1020,
+    "bad_price": 0,
+    "too_cheap": 26,
+    "too_pricey": 2,
+    "duplicates": 0,
+    "clean_rows": 992
+  },
+  "features": [
+    "chip_tier",
+    "num_cores",
+    "clock_ghz",
+    "ram_gb",
+    "storage_gb",
+    "battery_mah",
+    "fast_charge_w",
+    "screen_in",
+    "pixels_mp",
+    "refresh_hz",
+    "main_cam_mp",
+    "n_rear_cams",
+    "front_cam_mp",
+    "has_5g",
+    "has_nfc",
+    "has_ir",
+    "expandable",
+    "os_version",
+    "brand",
+    "processor_brand",
+    "os"
+  ],
+  "feature_labels": {
+    "chip_tier": "Chipset tier",
+    "num_cores": "CPU cores",
+    "clock_ghz": "CPU clock (GHz)",
+    "ram_gb": "RAM",
+    "storage_gb": "Storage",
+    "battery_mah": "Battery",
+    "fast_charge_w": "Fast charging",
+    "screen_in": "Screen size",
+    "pixels_mp": "Screen resolution",
+    "refresh_hz": "Refresh rate",
+    "main_cam_mp": "Main camera",
+    "n_rear_cams": "Rear cameras",
+    "front_cam_mp": "Front camera",
+    "has_5g": "5G",
+    "has_nfc": "NFC",
+    "has_ir": "IR blaster",
+    "expandable": "Expandable storage",
+    "os_version": "OS version",
+    "brand": "Brand",
+    "processor_brand": "Processor brand",
+    "os": "Operating system"
+  },
+  "shap_importance": [
+    {
+      "feature": "chip_tier",
+      "label": "Chipset tier",
+      "mean_abs_shap": 0.3140914998174139
+    },
+    {
+      "feature": "storage_gb",
+      "label": "Storage",
+      "mean_abs_shap": 0.07771739932604319
+    },
+    {
+      "feature": "pixels_mp",
+      "label": "Screen resolution",
+      "mean_abs_shap": 0.07063231028969022
+    },
+    {
+      "feature": "brand",
+      "label": "Brand",
+      "mean_abs_shap": 0.06624813198699504
+    },
+    {
+      "feature": "clock_ghz",
+      "label": "CPU clock (GHz)",
+      "mean_abs_shap": 0.06597103611928169
+    },
+    {
+      "feature": "ram_gb",
+      "label": "RAM",
+      "mean_abs_shap": 0.05782244688983305
+    },
+    {
+      "feature": "has_nfc",
+      "label": "NFC",
+      "mean_abs_shap": 0.057485881523874065
+    },
+    {
+      "feature": "fast_charge_w",
+      "label": "Fast charging",
+      "mean_abs_shap": 0.04104864993435685
+    },
+    {
+      "feature": "has_5g",
+      "label": "5G",
+      "mean_abs_shap": 0.03813563794921865
+    },
+    {
+      "feature": "battery_mah",
+      "label": "Battery",
+      "mean_abs_shap": 0.03239773197195145
+    },
+    {
+      "feature": "main_cam_mp",
+      "label": "Main camera",
+      "mean_abs_shap": 0.03027710344433461
+    },
+    {
+      "feature": "processor_brand",
+      "label": "Processor brand",
+      "mean_abs_shap": 0.028823203537924526
+    },
+    {
+      "feature": "front_cam_mp",
+      "label": "Front camera",
+      "mean_abs_shap": 0.028554308765266094
+    },
+    {
+      "feature": "n_rear_cams",
+      "label": "Rear cameras",
+      "mean_abs_shap": 0.027446698019260578
+    },
+    {
+      "feature": "screen_in",
+      "label": "Screen size",
+      "mean_abs_shap": 0.024270044053527774
+    },
+    {
+      "feature": "expandable",
+      "label": "Expandable storage",
+      "mean_abs_shap": 0.012415589366314957
+    },
+    {
+      "feature": "refresh_hz",
+      "label": "Refresh rate",
+      "mean_abs_shap": 0.008959224615954164
+    },
+    {
+      "feature": "os_version",
+      "label": "OS version",
+      "mean_abs_shap": 0.007881257495409922
+    },
+    {
+      "feature": "num_cores",
+      "label": "CPU cores",
+      "mean_abs_shap": 0.007335842330179422
+    },
+    {
+      "feature": "os",
+      "label": "Operating system",
+      "mean_abs_shap": 0.005510209384663113
+    },
+    {
+      "feature": "has_ir",
+      "label": "IR blaster",
+      "mean_abs_shap": 0.0013720467938946575
+    }
+  ],
+  "lgbm_params": {
+    "n_estimators": 700,
+    "learning_rate": 0.03,
+    "num_leaves": 15,
+    "min_child_samples": 8,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "random_state": 42,
+    "verbose": -1
+  },
+  "choices": {
+    "brands": [
+      "apple",
+      "asus",
+      "blackview",
+      "blu",
+      "cat",
+      "cola",
+      "doogee",
+      "duoqin",
+      "gionee",
+      "google",
+      "honor",
+      "huawei",
+      "ikall",
+      "infinix",
+      "iqoo",
+      "itel",
+      "jio",
+      "lava",
+      "leeco",
+      "leitz",
+      "lenovo",
+      "letv",
+      "lg",
+      "lyf",
+      "micromax",
+      "motorola",
+      "nokia",
+      "nothing",
+      "nubia",
+      "oneplus",
+      "oppo",
+      "oukitel",
+      "poco",
+      "realme",
+      "redmi",
+      "royole",
+      "samsung",
+      "sharp",
+      "sony",
+      "tcl",
+      "tecno",
+      "tesla",
+      "vivo",
+      "xiaomi",
+      "zte"
+    ],
+    "processor_brands": [
+      "apple",
+      "dimensity",
+      "exynos",
+      "helio",
+      "kirin",
+      "snapdragon",
+      "tensor",
+      "unisoc",
+      "unknown"
+    ],
+    "os": [
+      "android",
+      "ios",
+      "other"
+    ],
+    "chipsets": [
+      {
+        "chipset": "Bionic A17",
+        "tier": 10.0,
+        "processor_brand": "apple",
+        "n": 1
+      },
+      {
+        "chipset": "Bionic A16",
+        "tier": 9.5,
+        "processor_brand": "apple",
+        "n": 12
+      },
+      {
+        "chipset": "Dimensity 9200",
+        "tier": 9.5,
+        "processor_brand": "dimensity",
+        "n": 4
+      },
+      {
+        "chipset": "Snapdragon 8+ Gen 2",
+        "tier": 9.5,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Dimensity 9000 Plus",
+        "tier": 9.25,
+        "processor_brand": "dimensity",
+        "n": 6
+      },
+      {
+        "chipset": "Snapdragon 8 Gen 2",
+        "tier": 9.0,
+        "processor_brand": "snapdragon",
+        "n": 26
+      },
+      {
+        "chipset": "Bionic A15",
+        "tier": 9.0,
+        "processor_brand": "apple",
+        "n": 18
+      },
+      {
+        "chipset": "Dimensity 9000",
+        "tier": 9.0,
+        "processor_brand": "dimensity",
+        "n": 6
+      },
+      {
+        "chipset": "Exynos 2300",
+        "tier": 9.0,
+        "processor_brand": "exynos",
+        "n": 1
+      },
+      {
+        "chipset": "Kirin 9000",
+        "tier": 9.0,
+        "processor_brand": "kirin",
+        "n": 1
+      },
+      {
+        "chipset": "Kirin 9000E",
+        "tier": 9.0,
+        "processor_brand": "kirin",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 8+ Gen 1",
+        "tier": 8.5,
+        "processor_brand": "snapdragon",
+        "n": 39
+      },
+      {
+        "chipset": "Bionic A14",
+        "tier": 8.5,
+        "processor_brand": "apple",
+        "n": 8
+      },
+      {
+        "chipset": "Exynos 2100",
+        "tier": 8.5,
+        "processor_brand": "exynos",
+        "n": 6
+      },
+      {
+        "chipset": "Google Tensor G2",
+        "tier": 8.5,
+        "processor_brand": "tensor",
+        "n": 2
+      },
+      {
+        "chipset": "Dimensity 8100 Max",
+        "tier": 8.25,
+        "processor_brand": "dimensity",
+        "n": 9
+      },
+      {
+        "chipset": "Snapdragon 888+",
+        "tier": 8.25,
+        "processor_brand": "snapdragon",
+        "n": 7
+      },
+      {
+        "chipset": "Dimensity 8100 Ultra",
+        "tier": 8.25,
+        "processor_brand": "dimensity",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 8 Gen 1",
+        "tier": 8.0,
+        "processor_brand": "snapdragon",
+        "n": 36
+      },
+      {
+        "chipset": "Snapdragon 888",
+        "tier": 8.0,
+        "processor_brand": "snapdragon",
+        "n": 23
+      },
+      {
+        "chipset": "Dimensity 8100",
+        "tier": 8.0,
+        "processor_brand": "dimensity",
+        "n": 7
+      },
+      {
+        "chipset": "Dimensity 8200",
+        "tier": 8.0,
+        "processor_brand": "dimensity",
+        "n": 7
+      },
+      {
+        "chipset": "Bionic A13",
+        "tier": 8.0,
+        "processor_brand": "apple",
+        "n": 6
+      },
+      {
+        "chipset": "Google Tensor",
+        "tier": 8.0,
+        "processor_brand": "tensor",
+        "n": 5
+      },
+      {
+        "chipset": "Google Tensor 3",
+        "tier": 8.0,
+        "processor_brand": "tensor",
+        "n": 2
+      },
+      {
+        "chipset": "Snapdragon 870",
+        "tier": 7.5,
+        "processor_brand": "snapdragon",
+        "n": 23
+      },
+      {
+        "chipset": "Snapdragon 865",
+        "tier": 7.5,
+        "processor_brand": "snapdragon",
+        "n": 13
+      },
+      {
+        "chipset": "Exynos 990",
+        "tier": 7.5,
+        "processor_brand": "exynos",
+        "n": 7
+      },
+      {
+        "chipset": "Kirin 990",
+        "tier": 7.5,
+        "processor_brand": "kirin",
+        "n": 3
+      },
+      {
+        "chipset": "Snapdragon 855+",
+        "tier": 7.25,
+        "processor_brand": "snapdragon",
+        "n": 2
+      },
+      {
+        "chipset": "Dimensity 1200 Max",
+        "tier": 7.25,
+        "processor_brand": "dimensity",
+        "n": 1
+      },
+      {
+        "chipset": "Dimensity 1300",
+        "tier": 7.0,
+        "processor_brand": "dimensity",
+        "n": 11
+      },
+      {
+        "chipset": "Dimensity 1200",
+        "tier": 7.0,
+        "processor_brand": "dimensity",
+        "n": 5
+      },
+      {
+        "chipset": "Exynos 9825",
+        "tier": 7.0,
+        "processor_brand": "exynos",
+        "n": 3
+      },
+      {
+        "chipset": "Exynos 9820",
+        "tier": 7.0,
+        "processor_brand": "exynos",
+        "n": 2
+      },
+      {
+        "chipset": "Snapdragon 7 Gen 2",
+        "tier": 7.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 855",
+        "tier": 7.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 860",
+        "tier": 7.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Dimensity 1080",
+        "tier": 6.5,
+        "processor_brand": "dimensity",
+        "n": 12
+      },
+      {
+        "chipset": "Snapdragon 7 Gen 1",
+        "tier": 6.5,
+        "processor_brand": "snapdragon",
+        "n": 9
+      },
+      {
+        "chipset": "Snapdragon 845",
+        "tier": 6.5,
+        "processor_brand": "snapdragon",
+        "n": 3
+      },
+      {
+        "chipset": "Exynos 9810",
+        "tier": 6.5,
+        "processor_brand": "exynos",
+        "n": 2
+      },
+      {
+        "chipset": "Dimensity 1100",
+        "tier": 6.5,
+        "processor_brand": "dimensity",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 782G",
+        "tier": 6.5,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 778G Plus",
+        "tier": 6.25,
+        "processor_brand": "snapdragon",
+        "n": 7
+      },
+      {
+        "chipset": "Snapdragon 778G+",
+        "tier": 6.25,
+        "processor_brand": "snapdragon",
+        "n": 5
+      },
+      {
+        "chipset": "Dimensity 1000+",
+        "tier": 6.25,
+        "processor_brand": "dimensity",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 778G",
+        "tier": 6.0,
+        "processor_brand": "snapdragon",
+        "n": 21
+      },
+      {
+        "chipset": "Dimensity 920",
+        "tier": 6.0,
+        "processor_brand": "dimensity",
+        "n": 13
+      },
+      {
+        "chipset": "Dimensity 930",
+        "tier": 6.0,
+        "processor_brand": "dimensity",
+        "n": 4
+      },
+      {
+        "chipset": "Exynos 1380",
+        "tier": 6.0,
+        "processor_brand": "exynos",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 775",
+        "tier": 6.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 835",
+        "tier": 6.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon MSM8939",
+        "tier": 6.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Dimensity 900",
+        "tier": 5.5,
+        "processor_brand": "dimensity",
+        "n": 10
+      },
+      {
+        "chipset": "Snapdragon 765G",
+        "tier": 5.5,
+        "processor_brand": "snapdragon",
+        "n": 9
+      },
+      {
+        "chipset": "Snapdragon 750G",
+        "tier": 5.5,
+        "processor_brand": "snapdragon",
+        "n": 4
+      },
+      {
+        "chipset": "Snapdragon 6 Gen 1",
+        "tier": 5.5,
+        "processor_brand": "snapdragon",
+        "n": 3
+      },
+      {
+        "chipset": "Fusion A10",
+        "tier": 5.5,
+        "processor_brand": "apple",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 695",
+        "tier": 5.0,
+        "processor_brand": "snapdragon",
+        "n": 53
+      },
+      {
+        "chipset": "Dimensity 810",
+        "tier": 5.0,
+        "processor_brand": "dimensity",
+        "n": 30
+      },
+      {
+        "chipset": "Helio G99",
+        "tier": 5.0,
+        "processor_brand": "helio",
+        "n": 17
+      },
+      {
+        "chipset": "Snapdragon 720G",
+        "tier": 5.0,
+        "processor_brand": "snapdragon",
+        "n": 12
+      },
+      {
+        "chipset": "Exynos 1280",
+        "tier": 5.0,
+        "processor_brand": "exynos",
+        "n": 8
+      },
+      {
+        "chipset": "Snapdragon 732G",
+        "tier": 5.0,
+        "processor_brand": "snapdragon",
+        "n": 8
+      },
+      {
+        "chipset": "Dimensity 800U",
+        "tier": 5.0,
+        "processor_brand": "dimensity",
+        "n": 6
+      },
+      {
+        "chipset": "Dimensity 720",
+        "tier": 5.0,
+        "processor_brand": "dimensity",
+        "n": 4
+      },
+      {
+        "chipset": "Exynos 1330",
+        "tier": 5.0,
+        "processor_brand": "exynos",
+        "n": 4
+      },
+      {
+        "chipset": "Snapdragon 730G",
+        "tier": 5.0,
+        "processor_brand": "snapdragon",
+        "n": 2
+      },
+      {
+        "chipset": "Exynos 1200",
+        "tier": 5.0,
+        "processor_brand": "exynos",
+        "n": 1
+      },
+      {
+        "chipset": "Kirin 810",
+        "tier": 5.0,
+        "processor_brand": "kirin",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 730",
+        "tier": 5.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 810",
+        "tier": 5.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Tiger T7150",
+        "tier": 5.0,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 680",
+        "tier": 4.5,
+        "processor_brand": "snapdragon",
+        "n": 43
+      },
+      {
+        "chipset": "Dimensity 700",
+        "tier": 4.5,
+        "processor_brand": "dimensity",
+        "n": 39
+      },
+      {
+        "chipset": "Helio G96",
+        "tier": 4.5,
+        "processor_brand": "helio",
+        "n": 21
+      },
+      {
+        "chipset": "Helio G95",
+        "tier": 4.5,
+        "processor_brand": "helio",
+        "n": 11
+      },
+      {
+        "chipset": "Snapdragon 690",
+        "tier": 4.5,
+        "processor_brand": "snapdragon",
+        "n": 3
+      },
+      {
+        "chipset": "Snapdragon 712",
+        "tier": 4.5,
+        "processor_brand": "snapdragon",
+        "n": 3
+      },
+      {
+        "chipset": "Helio G90T",
+        "tier": 4.5,
+        "processor_brand": "helio",
+        "n": 2
+      },
+      {
+        "chipset": "Snapdragon 710",
+        "tier": 4.5,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 480+",
+        "tier": 4.25,
+        "processor_brand": "snapdragon",
+        "n": 5
+      },
+      {
+        "chipset": "Helio G85",
+        "tier": 4.0,
+        "processor_brand": "helio",
+        "n": 18
+      },
+      {
+        "chipset": "Helio G80",
+        "tier": 4.0,
+        "processor_brand": "helio",
+        "n": 14
+      },
+      {
+        "chipset": "Helio G88",
+        "tier": 4.0,
+        "processor_brand": "helio",
+        "n": 9
+      },
+      {
+        "chipset": "Snapdragon 4 Gen 1",
+        "tier": 4.0,
+        "processor_brand": "snapdragon",
+        "n": 6
+      },
+      {
+        "chipset": "Snapdragon 480",
+        "tier": 4.0,
+        "processor_brand": "snapdragon",
+        "n": 4
+      },
+      {
+        "chipset": "Snapdragon 675",
+        "tier": 4.0,
+        "processor_brand": "snapdragon",
+        "n": 3
+      },
+      {
+        "chipset": "Helio P95",
+        "tier": 4.0,
+        "processor_brand": "helio",
+        "n": 2
+      },
+      {
+        "chipset": "Snapdragon 678",
+        "tier": 4.0,
+        "processor_brand": "snapdragon",
+        "n": 2
+      },
+      {
+        "chipset": "Snapdragon 670",
+        "tier": 4.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Tiger T700",
+        "tier": 4.0,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 662",
+        "tier": 3.5,
+        "processor_brand": "snapdragon",
+        "n": 4
+      },
+      {
+        "chipset": "Snapdragon 665",
+        "tier": 3.5,
+        "processor_brand": "snapdragon",
+        "n": 4
+      },
+      {
+        "chipset": "Exynos 9611",
+        "tier": 3.5,
+        "processor_brand": "exynos",
+        "n": 3
+      },
+      {
+        "chipset": "Helio P60",
+        "tier": 3.5,
+        "processor_brand": "helio",
+        "n": 3
+      },
+      {
+        "chipset": "Helio G70",
+        "tier": 3.5,
+        "processor_brand": "helio",
+        "n": 2
+      },
+      {
+        "chipset": "Helio P70",
+        "tier": 3.5,
+        "processor_brand": "helio",
+        "n": 2
+      },
+      {
+        "chipset": "Helio P65",
+        "tier": 3.5,
+        "processor_brand": "helio",
+        "n": 1
+      },
+      {
+        "chipset": "Helio P35",
+        "tier": 3.0,
+        "processor_brand": "helio",
+        "n": 31
+      },
+      {
+        "chipset": "Helio G35",
+        "tier": 3.0,
+        "processor_brand": "helio",
+        "n": 20
+      },
+      {
+        "chipset": "Helio G37",
+        "tier": 3.0,
+        "processor_brand": "helio",
+        "n": 12
+      },
+      {
+        "chipset": "Exynos 850",
+        "tier": 3.0,
+        "processor_brand": "exynos",
+        "n": 9
+      },
+      {
+        "chipset": "Tiger T612",
+        "tier": 3.0,
+        "processor_brand": "unisoc",
+        "n": 9
+      },
+      {
+        "chipset": "Unisoc T606",
+        "tier": 3.0,
+        "processor_brand": "unisoc",
+        "n": 7
+      },
+      {
+        "chipset": "Snapdragon 439",
+        "tier": 3.0,
+        "processor_brand": "snapdragon",
+        "n": 5
+      },
+      {
+        "chipset": "Tiger T616",
+        "tier": 3.0,
+        "processor_brand": "unisoc",
+        "n": 5
+      },
+      {
+        "chipset": "Tiger T610",
+        "tier": 3.0,
+        "processor_brand": "unisoc",
+        "n": 4
+      },
+      {
+        "chipset": "Snapdragon 460",
+        "tier": 3.0,
+        "processor_brand": "snapdragon",
+        "n": 3
+      },
+      {
+        "chipset": "Unisoc T610",
+        "tier": 3.0,
+        "processor_brand": "unisoc",
+        "n": 3
+      },
+      {
+        "chipset": "Exynos 7885",
+        "tier": 3.0,
+        "processor_brand": "exynos",
+        "n": 2
+      },
+      {
+        "chipset": "Helio",
+        "tier": 3.0,
+        "processor_brand": "helio",
+        "n": 2
+      },
+      {
+        "chipset": "Unisoc T612",
+        "tier": 3.0,
+        "processor_brand": "unisoc",
+        "n": 2
+      },
+      {
+        "chipset": "Exynos 7904",
+        "tier": 3.0,
+        "processor_brand": "exynos",
+        "n": 1
+      },
+      {
+        "chipset": "Kirin 659",
+        "tier": 3.0,
+        "processor_brand": "kirin",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 450",
+        "tier": 3.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 625",
+        "tier": 3.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Tiger T606",
+        "tier": 3.0,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Helio G25",
+        "tier": 2.5,
+        "processor_brand": "helio",
+        "n": 13
+      },
+      {
+        "chipset": "Helio P22",
+        "tier": 2.5,
+        "processor_brand": "helio",
+        "n": 8
+      },
+      {
+        "chipset": "Tiger T310",
+        "tier": 2.5,
+        "processor_brand": "unisoc",
+        "n": 3
+      },
+      {
+        "chipset": "Snapdragon 425",
+        "tier": 2.5,
+        "processor_brand": "snapdragon",
+        "n": 2
+      },
+      {
+        "chipset": "Helio P23",
+        "tier": 2.5,
+        "processor_brand": "helio",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 615",
+        "tier": 2.5,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Helio A22",
+        "tier": 2.0,
+        "processor_brand": "helio",
+        "n": 10
+      },
+      {
+        "chipset": "Snapdragon 215",
+        "tier": 2.0,
+        "processor_brand": "snapdragon",
+        "n": 3
+      },
+      {
+        "chipset": "Helio A25",
+        "tier": 2.0,
+        "processor_brand": "helio",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 205",
+        "tier": 2.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon 210",
+        "tier": 2.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Snapdragon QM215",
+        "tier": 2.0,
+        "processor_brand": "snapdragon",
+        "n": 1
+      },
+      {
+        "chipset": "Unisoc",
+        "tier": 2.0,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Unisoc SC9863A",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 9
+      },
+      {
+        "chipset": "SC9863A",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 2
+      },
+      {
+        "chipset": "Spreadtrum SC9832E",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 2
+      },
+      {
+        "chipset": "Helio Mt6580",
+        "tier": 1.5,
+        "processor_brand": "helio",
+        "n": 1
+      },
+      {
+        "chipset": "Spreadtrum SC7731",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Spreadtrum SC7731E",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Unisoc A55",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Unisoc SC7731E",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Unisoc SC9832E",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Unisoc SC9836A",
+        "tier": 1.5,
+        "processor_brand": "unisoc",
+        "n": 1
+      },
+      {
+        "chipset": "Unisoc T107",
+        "tier": 1.0,
+        "processor_brand": "unisoc",
+        "n": 3
+      },
+      {
+        "chipset": "Unisoc T117",
+        "tier": 1.0,
+        "processor_brand": "unisoc",
+        "n": 2
+      }
+    ]
+  },
+  "price_range_inr": [
+    3099.0,
+    239999.0
+  ]
+}
